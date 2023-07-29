@@ -1,0 +1,476 @@
+debug.c:49:10: style: The scope of the variable 'buf' can be reduced. [variableScope]
+    char buf[28];
+         ^
+debug.c:50:13: style: The scope of the variable 'vlist' can be reduced. [variableScope]
+    va_list vlist;
+            ^
+ikcp.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+ikcp.c:1200:22: style: Condition 'mtu<(int)IKCP_OVERHEAD' is always false [knownConditionTrueFalse]
+ if (mtu < 50 || mtu < (int)IKCP_OVERHEAD)
+                     ^
+ikcp.c:1200:10: note: Assuming that condition 'mtu<50' is not redundant
+ if (mtu < 50 || mtu < (int)IKCP_OVERHEAD)
+         ^
+ikcp.c:1200:22: note: Condition 'mtu<(int)IKCP_OVERHEAD' is always false
+ if (mtu < 50 || mtu < (int)IKCP_OVERHEAD)
+                     ^
+ikcp.c:412:12: style: Local variable 'seg' shadows outer variable [shadowVariable]
+  IKCPSEG *seg = iqueue_entry(kcp->rcv_buf.next, IKCPSEG, node);
+           ^
+ikcp.c:361:11: note: Shadowed declaration
+ IKCPSEG *seg;
+          ^
+ikcp.c:412:12: note: Shadow variable
+  IKCPSEG *seg = iqueue_entry(kcp->rcv_buf.next, IKCPSEG, node);
+           ^
+ikcp.c:754:24: style: Local variable 'una' shadows outer variable [shadowVariable]
+  IUINT32 ts, sn, len, una, conv;
+                       ^
+ikcp.c:743:10: note: Shadowed declaration
+ IUINT32 una = kcp->snd_una;
+         ^
+ikcp.c:754:24: note: Shadow variable
+  IUINT32 ts, sn, len, una, conv;
+                       ^
+ikcp.c:1058:8: style: Local variable 'size' shadows outer variable [shadowVariable]
+   int size, need;
+       ^
+ikcp.c:915:13: note: Shadowed declaration
+ int count, size, i;
+            ^
+ikcp.c:1058:8: note: Shadow variable
+   int size, need;
+       ^
+json.c:280:16: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            {  sprintf (error, "Unexpected EOF in string (at %d:%d)", line_and_col);
+               ^
+json.c:280:16: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            {  sprintf (error, "Unexpected EOF in string (at %d:%d)", line_and_col);
+               ^
+json.c:306:25: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                        sprintf (error, "Invalid character value `%c` (at %d:%d)", b, line_and_col);
+                        ^
+json.c:306:25: warning: %d in format string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                        sprintf (error, "Invalid character value `%c` (at %d:%d)", b, line_and_col);
+                        ^
+json.c:323:29: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                            sprintf (error, "Invalid character value `%c` (at %d:%d)", b, line_and_col);
+                            ^
+json.c:323:29: warning: %d in format string (no. 3) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                            sprintf (error, "Invalid character value `%c` (at %d:%d)", b, line_and_col);
+                            ^
+json.c:452:22: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                  {  sprintf (error, "%d:%d: Unexpected EOF in block comment", line_and_col);
+                     ^
+json.c:452:22: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                  {  sprintf (error, "%d:%d: Unexpected EOF in block comment", line_and_col);
+                     ^
+json.c:468:19: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+               {  sprintf (error, "%d:%d: Comment not allowed here", line_and_col);
+                  ^
+json.c:468:19: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+               {  sprintf (error, "%d:%d: Comment not allowed here", line_and_col);
+                  ^
+json.c:473:19: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+               {  sprintf (error, "%d:%d: EOF unexpected", line_and_col);
+                  ^
+json.c:473:19: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+               {  sprintf (error, "%d:%d: EOF unexpected", line_and_col);
+                  ^
+json.c:488:22: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                     sprintf (error, "%d:%d: Unexpected `%c` in comment opening sequence", line_and_col, b);
+                     ^
+json.c:488:22: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                     sprintf (error, "%d:%d: Unexpected `%c` in comment opening sequence", line_and_col, b);
+                     ^
+json.c:506:19: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                  sprintf (error, "%d:%d: Trailing garbage: `%c`",
+                  ^
+json.c:506:19: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                  sprintf (error, "%d:%d: Trailing garbage: `%c`",
+                  ^
+json.c:525:22: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                  {  sprintf (error, "%d:%d: Unexpected ]", line_and_col);
+                     ^
+json.c:525:22: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                  {  sprintf (error, "%d:%d: Unexpected ]", line_and_col);
+                     ^
+json.c:541:25: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                        sprintf (error, "%d:%d: Expected , before %c",
+                        ^
+json.c:541:25: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                        sprintf (error, "%d:%d: Expected , before %c",
+                        ^
+json.c:556:25: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                        sprintf (error, "%d:%d: Expected : before %c",
+                        ^
+json.c:556:25: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                        sprintf (error, "%d:%d: Expected : before %c",
+                        ^
+json.c:682:28: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                        {  sprintf (error, "%d:%d: Unexpected %c when seeking value", line_and_col, b);
+                           ^
+json.c:682:28: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                        {  sprintf (error, "%d:%d: Unexpected %c when seeking value", line_and_col, b);
+                           ^
+json.c:702:25: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                     {  sprintf (error, "%d:%d: Expected , before \"", line_and_col);
+                        ^
+json.c:702:25: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                     {  sprintf (error, "%d:%d: Expected , before \"", line_and_col);
+                        ^
+json.c:727:22: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                     sprintf (error, "%d:%d: Unexpected `%c` in object", line_and_col, b);
+                     ^
+json.c:727:22: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                     sprintf (error, "%d:%d: Unexpected `%c` in object", line_and_col, b);
+                     ^
+json.c:745:28: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                        {  sprintf (error, "%d:%d: Unexpected `0` before `%c`", line_and_col, b);
+                           ^
+json.c:745:28: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                        {  sprintf (error, "%d:%d: Unexpected `0` before `%c`", line_and_col, b);
+                           ^
+json.c:782:22: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                  {  sprintf (error, "%d:%d: Expected digit before `.`", line_and_col);
+                     ^
+json.c:782:22: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                  {  sprintf (error, "%d:%d: Expected digit before `.`", line_and_col);
+                     ^
+json.c:798:25: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                     {  sprintf (error, "%d:%d: Expected digit after `.`", line_and_col);
+                        ^
+json.c:798:25: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                     {  sprintf (error, "%d:%d: Expected digit after `.`", line_and_col);
+                        ^
+json.c:824:22: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                  {  sprintf (error, "%d:%d: Expected digit after `e`", line_and_col);
+                     ^
+json.c:824:22: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+                  {  sprintf (error, "%d:%d: Expected digit after `e`", line_and_col);
+                     ^
+json.c:910:4: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+   sprintf (error, "%d:%d: Unknown value", line_and_col);
+   ^
+json.c:910:4: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+   sprintf (error, "%d:%d: Unknown value", line_and_col);
+   ^
+json.c:920:4: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+   sprintf (error, "%d:%d: Too long (caught overflow)", line_and_col);
+   ^
+json.c:920:4: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+   sprintf (error, "%d:%d: Too long (caught overflow)", line_and_col);
+   ^
+json.c:224:36: style:inconclusive: Function 'json_parse_ex' argument 4 names different: declaration 'error' definition 'error_buf'. [funcArgNamesDifferent]
+                            char * error_buf)
+                                   ^
+json.h:265:36: note: Function 'json_parse_ex' argument 4 names different: declaration 'error' definition 'error_buf'.
+                            char * error);
+                                   ^
+json.c:224:36: note: Function 'json_parse_ex' argument 4 names different: declaration 'error' definition 'error_buf'.
+                            char * error_buf)
+                                   ^
+json.c:829:52: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+                      (flags & flag_num_e_negative ? - num_e : num_e));
+                                                   ^
+jwHash.c:330:65: style:inconclusive: Function 'add_ptr_by_str' argument 3 names different: declaration 'value' definition 'ptr'. [funcArgNamesDifferent]
+HASHRESULT add_ptr_by_str( jwHashTable *table, char *key, void *ptr )
+                                                                ^
+jwHash.h:105:59: note: Function 'add_ptr_by_str' argument 3 names different: declaration 'value' definition 'ptr'.
+HASHRESULT add_ptr_by_str( jwHashTable*, char *key, void *value );
+                                                          ^
+jwHash.c:330:65: note: Function 'add_ptr_by_str' argument 3 names different: declaration 'value' definition 'ptr'.
+HASHRESULT add_ptr_by_str( jwHashTable *table, char *key, void *ptr )
+                                                                ^
+jwHash.c:101:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashTable *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("table: %x bucket: %x\n",table,table->bucket);
+ ^
+jwHash.c:101:2: warning: %x in format string (no. 2) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("table: %x bucket: %x\n",table,table->bucket);
+ ^
+jwHash.c:146:2: portability: %ld in format string (no. 3) requires 'long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %s -> %s hash: %ld\n",key,value,hash);
+ ^
+jwHash.c:152:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("entry: %x\n",entry);
+ ^
+jwHash.c:155:3: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+  HASH_DEBUG("checking entry: %x\n",entry);
+  ^
+jwHash.c:173:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("new entry: %x\n",entry);
+ ^
+jwHash.c:187:2: portability: %ld in format string (no. 3) requires 'long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %s -> %f hash: %ld\n",key,value,hash);
+ ^
+jwHash.c:193:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("entry: %x\n",entry);
+ ^
+jwHash.c:196:3: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+  HASH_DEBUG("checking entry: %x\n",entry);
+  ^
+jwHash.c:213:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("new entry: %x\n",entry);
+ ^
+jwHash.c:228:2: warning: %d in format string (no. 2) requires 'int' but the argument type is 'signed long'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %s -> %d hash: %ld\n",key,value,hash);
+ ^
+jwHash.c:228:2: portability: %ld in format string (no. 3) requires 'long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %s -> %d hash: %ld\n",key,value,hash);
+ ^
+jwHash.c:243:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("entry: %x\n",entry);
+ ^
+jwHash.c:246:3: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+  HASH_DEBUG("checking entry: %x\n",entry);
+  ^
+jwHash.c:263:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("new entry: %x\n",entry);
+ ^
+jwHash.c:308:2: warning: %x in format string (no. 2) requires 'unsigned int' but the argument type is 'void *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("adding %s -> %x hash: %ld\n",key,ptr,hash);
+ ^
+jwHash.c:308:2: portability: %ld in format string (no. 3) requires 'long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %s -> %x hash: %ld\n",key,ptr,hash);
+ ^
+jwHash.c:314:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("entry: %x\n",entry);
+ ^
+jwHash.c:317:3: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+  HASH_DEBUG("checking entry: %x\n",entry);
+  ^
+jwHash.c:334:2: warning: %x in format string (no. 2) requires 'unsigned int' but the argument type is 'void *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("adding %s -> %x hash: %ld\n",key,ptr,hash);
+ ^
+jwHash.c:334:2: portability: %ld in format string (no. 3) requires 'long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %s -> %x hash: %ld\n",key,ptr,hash);
+ ^
+jwHash.c:340:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("entry: %x\n",entry);
+ ^
+jwHash.c:343:3: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+  HASH_DEBUG("checking entry: %x\n",entry);
+  ^
+jwHash.c:360:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("new entry: %x\n",entry);
+ ^
+jwHash.c:375:2: portability: %ld in format string (no. 2) requires 'long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("deleting: %s hash: %ld\n",key,hash);
+ ^
+jwHash.c:382:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("entry: %x\n",entry);
+ ^
+jwHash.c:385:3: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+  HASH_DEBUG("checking entry: %x\n",entry);
+  ^
+jwHash.c:413:2: portability: %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("fetching %s -> ?? hash: %d\n",key,hash);
+ ^
+jwHash.c:440:2: portability: %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("fetching %s -> ?? hash: %d\n",key,hash);
+ ^
+jwHash.c:449:3: warning: %ld in format string (no. 2) requires 'long' but the argument type is 'signed int'. [invalidPrintfArgType_sint]
+  HASH_DEBUG("found entry key: %s value: %ld\n",entry->key.strValue,entry->value.intValue);
+  ^
+jwHash.c:467:2: portability: %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("fetching %s -> ?? hash: %d\n",key,hash);
+ ^
+jwHash.c:497:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'signed long'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %d -> %s hash: %d\n",key,value,hash);
+ ^
+jwHash.c:497:2: portability: %d in format string (no. 3) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %d -> %s hash: %d\n",key,value,hash);
+ ^
+jwHash.c:503:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("entry: %x\n",entry);
+ ^
+jwHash.c:506:3: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+  HASH_DEBUG("checking entry: %x\n",entry);
+  ^
+jwHash.c:524:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("new entry: %x\n",entry);
+ ^
+jwHash.c:539:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'signed long'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %d -> %f hash: %d\n",key,value,hash);
+ ^
+jwHash.c:539:2: portability: %d in format string (no. 3) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %d -> %f hash: %d\n",key,value,hash);
+ ^
+jwHash.c:545:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("entry: %x\n",entry);
+ ^
+jwHash.c:548:3: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+  HASH_DEBUG("checking entry: %x\n",entry);
+  ^
+jwHash.c:565:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("new entry: %x\n",entry);
+ ^
+jwHash.c:579:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'signed long'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %d -> %d hash: %d\n",key,value,hash);
+ ^
+jwHash.c:579:2: warning: %d in format string (no. 2) requires 'int' but the argument type is 'signed long'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %d -> %d hash: %d\n",key,value,hash);
+ ^
+jwHash.c:579:2: portability: %d in format string (no. 3) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("adding %d -> %d hash: %d\n",key,value,hash);
+ ^
+jwHash.c:585:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("entry: %x\n",entry);
+ ^
+jwHash.c:588:3: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+  HASH_DEBUG("checking entry: %x\n",entry);
+  ^
+jwHash.c:605:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("new entry: %x\n",entry);
+ ^
+jwHash.c:621:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'signed long'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("deleting: %d hash: %d\n",key,hash);
+ ^
+jwHash.c:621:2: portability: %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("deleting: %d hash: %d\n",key,hash);
+ ^
+jwHash.c:628:2: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+ HASH_DEBUG("entry: %x\n",entry);
+ ^
+jwHash.c:631:3: warning: %x in format string (no. 1) requires 'unsigned int' but the argument type is 'jwHashEntry *'. [invalidPrintfArgType_uint]
+  HASH_DEBUG("checking entry: %x\n",entry);
+  ^
+jwHash.c:658:2: warning: %d in format string (no. 1) requires 'int' but the argument type is 'signed long'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("fetching %d -> ?? hash: %d\n",key,hash);
+ ^
+jwHash.c:658:2: portability: %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+ HASH_DEBUG("fetching %d -> ?? hash: %d\n",key,hash);
+ ^
+jwHash.c:271:1: style: Label 'unlock' is not used. There is #if in function body so the label might be used in code that is removed by the preprocessor. [unusedLabelConfiguration]
+unlock:
+^
+tcp_client.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+tcp_proxy.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+xkcp_client.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+xkcp_client.c:72:6: style: The scope of the variable 'index' can be reduced. [variableScope]
+ int index = 0;
+     ^
+xkcp_config.c:149:3: error: Resource leak: f [resourceLeak]
+  return 1;
+  ^
+xkcp_config.c:155:3: error: Memory leak: buf [memleak]
+  return 1;
+  ^
+xkcp_config.c:155:3: error: Resource leak: f [resourceLeak]
+  return 1;
+  ^
+xkcp_config.c:128:46: style:inconclusive: Function 'xkcp_parse_json_param' argument 1 names different: declaration 'config' definition 'param'. [funcArgNamesDifferent]
+int xkcp_parse_json_param(struct xkcp_param *param, const char *filename)
+                                             ^
+xkcp_config.h:69:46: note: Function 'xkcp_parse_json_param' argument 1 names different: declaration 'config' definition 'param'.
+int xkcp_parse_json_param(struct xkcp_param *config, const char *filename);
+                                             ^
+xkcp_config.c:128:46: note: Function 'xkcp_parse_json_param' argument 1 names different: declaration 'config' definition 'param'.
+int xkcp_parse_json_param(struct xkcp_param *param, const char *filename)
+                                             ^
+xkcp_mon.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+xkcp_server.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+xkcp_server.c:158:7: style: Local variable 'nret' shadows outer variable [shadowVariable]
+  int nret = ikcp_input(task->kcp, data, len);
+      ^
+xkcp_server.c:125:6: note: Shadowed declaration
+ int nret = getnameinfo((struct sockaddr *) from, from_len,
+     ^
+xkcp_server.c:158:7: note: Shadow variable
+  int nret = ikcp_input(task->kcp, data, len);
+      ^
+xkcp_util.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+xkcp_util.c:111:9: warning: Either the condition 'ip_str' is redundant or there is possible null pointer dereference: ip_str. [nullPointerRedundantCheck]
+ memset(ip_str, 0, HTTP_IP_ADDR_LEN);
+        ^
+xkcp_util.c:112:5: note: Assuming that condition 'ip_str' is not redundant
+ if(ip_str&&inet_ntop(AF_INET, &in, ip_str, HTTP_IP_ADDR_LEN))
+    ^
+xkcp_util.c:111:9: note: Null pointer dereference
+ memset(ip_str, 0, HTTP_IP_ADDR_LEN);
+        ^
+xkcp_util.c:208:12: style: The scope of the variable 'nret' can be reduced. [variableScope]
+ int  len, nret;
+           ^
+xkcp_util.c:106:56: portability: '(void*)&if_data.ifr_addr.sa_data' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+ memcpy((void *)&ip, (void *)&if_data.ifr_addr.sa_data + 2, 4);
+                                                       ^
+jwHash.c:535:0: style: The function 'add_dbl_by_int' is never used. [unusedFunction]
+
+^
+jwHash.c:183:0: style: The function 'add_dbl_by_str' is never used. [unusedFunction]
+
+^
+jwHash.c:575:0: style: The function 'add_int_by_int' is never used. [unusedFunction]
+
+^
+jwHash.c:223:0: style: The function 'add_int_by_str' is never used. [unusedFunction]
+
+^
+jwHash.c:493:0: style: The function 'add_str_by_int' is never used. [unusedFunction]
+
+^
+jwHash.c:142:0: style: The function 'add_str_by_str' is never used. [unusedFunction]
+
+^
+jwHash.c:617:0: style: The function 'del_by_int' is never used. [unusedFunction]
+
+^
+jwHash.c:371:0: style: The function 'del_by_str' is never used. [unusedFunction]
+
+^
+jwHash.c:463:0: style: The function 'get_dbl_by_str' is never used. [unusedFunction]
+
+^
+jwHash.c:436:0: style: The function 'get_int_by_str' is never used. [unusedFunction]
+
+^
+jwHash.c:654:0: style: The function 'get_str_by_int' is never used. [unusedFunction]
+
+^
+jwHash.c:409:0: style: The function 'get_str_by_str' is never used. [unusedFunction]
+
+^
+xkcp_util.c:54:0: style: The function 'get_task_list_count' is never used. [unusedFunction]
+
+^
+ikcp.c:164:0: style: The function 'ikcp_allocator' is never used. [unusedFunction]
+
+^
+ikcp.c:1157:0: style: The function 'ikcp_check' is never used. [unusedFunction]
+
+^
+ikcp.c:1212:0: style: The function 'ikcp_interval' is never used. [unusedFunction]
+
+^
+ikcp.c:214:0: style: The function 'ikcp_qprint' is never used. [unusedFunction]
+
+^
+ikcp.c:1197:0: style: The function 'ikcp_setmtu' is never used. [unusedFunction]
+
+^
+ikcp.c:345:0: style: The function 'ikcp_setoutput' is never used. [unusedFunction]
+
+^
+ikcp.c:1259:0: style: The function 'ikcp_waitsnd' is never used. [unusedFunction]
+
+^
+json.c:949:0: style: The function 'json_parse' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
